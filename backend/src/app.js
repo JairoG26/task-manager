@@ -1,13 +1,18 @@
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
 const app = express();
 const { swaggerUi, swaggerSpec } = require('./swagger');
 
-app.use(cors());
+// Configurar CORS para tu frontend
+app.use(cors({
+  origin: 'https://task-manager-j26.netlify.app',
+  methods: ['GET','POST','PUT','DELETE'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 const taskRoutes = require('./routes/taskRoutes');
-
 app.use('/api', taskRoutes);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
