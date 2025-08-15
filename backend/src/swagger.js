@@ -10,7 +10,7 @@ const options = {
       description: 'API para gestionar tareas',
     },
     servers: [
-      { url: '/api' }
+      { url: '/' }
     ],
     components: {
       schemas: {
