@@ -10,7 +10,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/tasks:
+ * /tasks:
  *   post:
  *     summary: Create a new task
  *     tags: [Tasks]
@@ -31,7 +31,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/tasks:
+ * /tasks:
  *   get:
  *     summary: Get a list of tasks
  *     tags: [Tasks]
@@ -98,7 +98,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/tasks/{id}:
+ * /tasks/{id}:
  *   get:
  *     summary: Get a task by ID
  *     tags: [Tasks]
@@ -122,7 +122,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/tasks/{id}:
+ * /tasks/{id}:
  *   put:
  *     summary: Update an existing task
  *     tags: [Tasks]
@@ -152,7 +152,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/tasks/{id}:
+ * /tasks/{id}:
  *   delete:
  *     summary: Delete a task by ID
  *     tags: [Tasks]
