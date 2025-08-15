@@ -10,7 +10,7 @@ const options = {
       description: 'API para gestionar tareas',
     },
     servers: [
-      { url: 'https://task-manager-backend-1l6d.onrender.com/api' }
+      { url: '/api' }
     ],
     components: {
       schemas: {
