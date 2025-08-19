@@ -10,7 +10,7 @@ const options = {
       description: 'API para gestionar tareas',
     },
     servers: [
-      { url: '/' }
+      { url: '/api' } // 👈 así todas las rutas empiezan con /api
     ],
     components: {
       schemas: {
@@ -36,15 +36,12 @@ const options = {
             status: { type: 'string', enum: ['pendiente', 'en_progreso', 'completada'], default: 'pendiente' },
             priority: { type: 'integer', example: 2, default: 2 },
             due_date: { type: 'string', format: 'date-time', example: '2025-08-20T12:00:00Z' }
+          }
+        }
       }
     }
-      }
-    },
-
-
-
   },
-  apis: ['./routes/taskRoutes.js'], // Puedes documentar tus rutas con comentarios JSDoc
+  apis: ['./routes/taskRoutes.js'], // Documentas ahí las rutas
 };
 
 const swaggerSpec = swaggerJSDoc(options);
