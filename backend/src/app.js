@@ -8,10 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 📖 Swagger UI
+// Swagger UI
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// 📌 Rutas de API
+// API Routes
 app.use('/api', taskRoutes);
 
 module.exports = app;

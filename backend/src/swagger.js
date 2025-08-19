@@ -44,7 +44,7 @@ const options = {
 
 
   },
-  apis: ['./routes/*.js'], // Puedes documentar tus rutas con comentarios JSDoc
+  apis: ['./routes/*.js'],
 };
 
 const swaggerSpec = swaggerJSDoc(options);

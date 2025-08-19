@@ -27,7 +27,7 @@ const GetTasksQuerySchema = z.object({
   sortOrder: z.enum(['asc', 'desc']).optional().default('desc')
 });
 
-// Param ID -> transforma a BigInt
+// Param ID -> transform to BigInt
 const IdParamSchema = z.object({
   id: z.string().regex(/^\d+$/, 'id must be a positive integer').transform(s => BigInt(s))
 });
