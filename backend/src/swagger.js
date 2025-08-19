@@ -10,7 +10,7 @@ const options = {
       description: 'API para gestionar tareas',
     },
     servers: [
-      { url: '/api' } // 👈 así todas las rutas empiezan con /api
+      { url: 'https://task-manager-backend-1l6d.onrender.com/api' }
     ],
     components: {
       schemas: {
