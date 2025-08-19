@@ -12,6 +12,6 @@ app.use(express.json());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // 📌 Rutas de API
-app.use('/api/tasks', taskRoutes);
+app.use('/api', taskRoutes);
 
 module.exports = app;
