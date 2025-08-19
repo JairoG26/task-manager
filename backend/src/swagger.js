@@ -10,7 +10,7 @@ const options = {
       description: 'API para gestionar tareas',
     },
     servers: [
-      { url: 'https://task-manager-backend-1l6d.onrender.com/api' }
+      { url: 'http://localhost:3000/api' }
     ],
     components: {
       schemas: {
@@ -36,12 +36,15 @@ const options = {
             status: { type: 'string', enum: ['pendiente', 'en_progreso', 'completada'], default: 'pendiente' },
             priority: { type: 'integer', example: 2, default: 2 },
             due_date: { type: 'string', format: 'date-time', example: '2025-08-20T12:00:00Z' }
-          }
-        }
       }
     }
+      }
+    },
+
+
+
   },
-  apis: ['./routes/taskRoutes.js'], // Documentas ahí las rutas
+  apis: ['./routes/*.js'], // Puedes documentar tus rutas con comentarios JSDoc
 };
 
 const swaggerSpec = swaggerJSDoc(options);
